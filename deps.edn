@@ -1,0 +1,3 @@
+{:deps {midje               {:local/root "/home/arne/github/midje"}
+        lambdaisland/kaocha {:local/root "/home/arne/github/kaocha"}}
+ :paths ["src"]}
