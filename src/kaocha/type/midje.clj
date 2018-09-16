@@ -8,8 +8,8 @@
             [midje.emission.state :as m.e.state]
             [kaocha.output :as out]))
 
-(def testable-defaults {:kaocha.suite/test-paths ["test"]
-                        :kaocha.suite/ns-patterns [".*-test"]})
+(def testable-defaults {:kaocha/test-paths ["test"]
+                        :kaocha/ns-patterns [".*-test"]})
 
 (defn ->ns-testable [ns-name]
   {:kaocha.testable/type :kaocha.type.midje/ns
