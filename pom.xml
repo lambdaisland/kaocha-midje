@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>lambdaisland</groupId>
   <artifactId>kaocha-midje</artifactId>
-  <version>0.0</version>
+  <version>0.0-5</version>
 
   <name>kaocha-midje</name>
   <description>Midje integration for Kaocha.</description>
@@ -26,7 +26,7 @@
       <url>https://github.com/lambdaisland/kaocha-midje</url>
       <connection>scm:git:git://github.com/lambdaisland/kaocha-midje.git</connection>
       <developerConnection>scm:git:ssh://git@github.com/lambdaisland/kaocha-midje.git</developerConnection>
-      <tag>6c5fc0224d3b949ced186dbcb749242ffc738755</tag>
+      <tag>d0fdc22ca74cd7a770399ed379a098d707a6a7ab</tag>
   </scm>
 
   <dependencies>
@@ -69,7 +69,7 @@
             <configuration>
                 <archive>
                     <manifestEntries>
-                        <Git-Revision>6c5fc0224d3b949ced186dbcb749242ffc738755</Git-Revision>
+                        <Git-Revision>d0fdc22ca74cd7a770399ed379a098d707a6a7ab</Git-Revision>
                     </manifestEntries>
                 </archive>
             </configuration>
