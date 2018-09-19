@@ -10,7 +10,7 @@
 
 ## Usage
 
-- add `lambdaisland/kaocha-midje {:mvn/version "0.0"}` to your dependencies
+- add `lambdaisland/kaocha-midje {:mvn/version "0.0-5"}` to your dependencies
 - add a test suite with `:type :kaocha.type/midje`
 
 ``` clojure
