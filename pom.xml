@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>lambdaisland</groupId>
+  <artifactId>kaocha-midje</artifactId>
+  <version>0.0</version>
+
+  <name>kaocha-midje</name>
+  <description>Midje integration for Kaocha.</description>
+  <url>https://github.com/lambdaisland/kaocha-midje</url>
+
+  <inceptionYear>2018</inceptionYear>
+  <organization>
+      <name>Lambda Island</name>
+      <url>https://lambdaisland.com</url>
+  </organization>
+
+  <licenses>
+      <license>
+          <name>Eclipse Public License 1.0</name>
+          <url>https://www.eclipse.org/legal/epl-v10.html</url>
+      </license>
+  </licenses>
+
+  <scm>
+      <url>https://github.com/lambdaisland/kaocha-midje</url>
+      <connection>scm:git:git://github.com/lambdaisland/kaocha-midje.git</connection>
+      <developerConnection>scm:git:ssh://git@github.com/lambdaisland/kaocha-midje.git</developerConnection>
+      <tag>6c5fc0224d3b949ced186dbcb749242ffc738755</tag>
+  </scm>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.clojure</groupId>
+      <artifactId>clojure</artifactId>
+      <version>1.10.0-alpha7</version>
+    </dependency>
+
+    <dependency>
+      <groupId>lambdaisland</groupId>
+      <artifactId>kaocha</artifactId>
+      <version>0.0-147</version>
+    </dependency>
+
+    <dependency>
+        <groupId>midje</groupId>
+        <artifactId>midje</artifactId>
+        <version>1.9.0</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+
+    <resources>
+        <resource>
+            <directory>src</directory>
+        </resource>
+        <resource>
+            <directory>resources</directory>
+        </resource>
+    </resources>
+
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>2.4</version>
+            <configuration>
+                <archive>
+                    <manifestEntries>
+                        <Git-Revision>6c5fc0224d3b949ced186dbcb749242ffc738755</Git-Revision>
+                    </manifestEntries>
+                </archive>
+            </configuration>
+        </plugin>
+    </plugins>
+  </build>
+
+  <repositories>
+    <repository>
+      <id>clojars</id>
+      <url>https://clojars.org/repo</url>
+    </repository>
+  </repositories>
+
+  <distributionManagement>
+      <repository>
+          <id>clojars</id>
+          <name>Clojars repository</name>
+          <url>https://clojars.org/repo</url>
+      </repository>
+  </distributionManagement>
+</project>
