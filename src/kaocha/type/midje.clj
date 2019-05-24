@@ -4,8 +4,10 @@
             [kaocha.load :as load]
             [clojure.test :as t]
             [midje.data.compendium]
+            [midje.config :as m.config]
             [midje.emission.api :as m.e.api]
             [midje.emission.state :as m.e.state]
+            [midje.repl :as m.repl]
             [kaocha.output :as out]))
 
 (def testable-defaults {:kaocha/test-paths ["test"]
@@ -26,17 +28,17 @@
     (t/do-report {:type :end-test-suite, :kaocha/testable testable})
     testable))
 
-
 (defmethod testable/-load :kaocha.type.midje/ns [{::keys [ns-name] :as testable}]
   (let [ns-name (::ns-name testable)]
     (try
-      ;; TODO, unload first
-      (require ns-name :reload)
+      (m.config/with-augmented-config {:check-after-creation false
+                                       :print-level :print-nothing}
+        (m.repl/forget-facts :all)
+        (m.repl/load-facts ns-name))
+
       (let [ns-obj  (the-ns ns-name)
             ns-meta (meta ns-obj)
-            facts   (-> @midje.data.compendium/global
-                        :by-namespace
-                        (get ns-name))]
+            facts (m.repl/fetch-facts ns-name)]
         (assoc testable
                :kaocha.test-plan/tests
                (for [fact facts
