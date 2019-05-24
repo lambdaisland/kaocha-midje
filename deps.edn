@@ -1,4 +1,8 @@
-{:deps {midje               {:local/root "/home/arne/github/midje"}
-        lambdaisland/kaocha {:mvn/version "0.0-134"}}
- :paths ["src"
-         "/home/arne/github/midje/src"]}
+{:deps
+ {midje               {:mvn/version "1.9.8"}
+  lambdaisland/kaocha {:mvn/version "0.0-418"}}
+
+ :paths ["src"]
+
+ :aliases
+ {:dev {}}}
