@@ -6,6 +6,8 @@
 
 [Midje](https://github.com/marick/Midje) integration for [Kaocha](https://github.com/lambdaisland/kaocha).
 
+Note that this integration is in very early stages, and it isn't a priority for the Lambda Island team. PRs are welcome, but if you want something that "just works," we recommend using [fudje](https://github.com/jimpil/fudje).
+
 ## Links
 
 - [Github](https://github.com/lambdaisland/kaocha-midje)
